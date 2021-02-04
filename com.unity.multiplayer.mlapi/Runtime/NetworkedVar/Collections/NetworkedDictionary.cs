@@ -11,7 +11,7 @@ namespace MLAPI.NetworkedVar.Collections
     /// </summary>
     /// <typeparam name="TKey">The type for the dictionary keys</typeparam>
     /// <typeparam name="TValue">The type for the dictionary values</typeparam>
-    public class NetworkedDictionary<TKey, TValue> : IDictionary<TKey, TValue>, INetworkedVar
+    public class NetworkedDictionary<TKey, TValue> : INetworkedVar, IDictionary<TKey, TValue>
     {
         /// <summary>
         /// Gets the last time the variable was synced
@@ -537,6 +537,8 @@ namespace MLAPI.NetworkedVar.Collections
         {
             return dictionary.GetEnumerator();
         }
+
+        public ushort SrcTick { get; }
     }
 
     /// <summary>

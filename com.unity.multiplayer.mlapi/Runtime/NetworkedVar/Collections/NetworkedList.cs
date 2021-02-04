@@ -536,6 +536,8 @@ namespace MLAPI.NetworkedVar.Collections
                     OnListChanged(listEvent);
             }
         }
+
+        public ushort SrcTick { get; }
     }
 
     /// <summary>
